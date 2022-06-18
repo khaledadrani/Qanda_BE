@@ -1,14 +1,23 @@
 # Steps to reproduce working environment:
 
 1 - git clone this repo
+
 2 - python -m venv env (to create new enviornment)
+
 3 - pip install -r requirements.txt (to install dependencies)
+
 4 - Install postgresql and create a database named qanda with the default user postgres (check jimbo/jimbo/settings.py for DATABASES)
+
 5 - test app: cd jimbo & python manage.py runserver
+
 6 - When working with the project, make sure you are always in the directory jimbo/
+
 7 - run python manage.py makemigrations and python manage.py migrate
+
 8 - open browser: http://localhost:8000/ and check if there is a welcoming message
+
 9 - For now there are two routes: / and qa/, use qa/ POST to answer questions and to save them to db, use qa/ GET to see them all
+
 10 - If you have an issue of csrf token and you are working with POSTMAN: https://ourcodeworld.com/articles/read/1619/how-to-handle-postman-and-django-403-forbidden-error-csrf-verification-failed
 
 (not completed)
