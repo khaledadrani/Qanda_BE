@@ -1,4 +1,13 @@
-# Steps to reproduce working environment:
+# Jimbo, Question Answer Platform (Backend API service)
+
+Project in progress, main goal is to learn django in depth and to start practising MLOPS.
+
+# What's next?
+
+-  seperate Model handling into its own service, perhaps with Fastapi (for cloud: EC2 + Lambda)
+-  dashboard (django templates/ react/ angular)
+
+# Steps to reproduce working environment (NEED UPDATES):
 
 1 - git clone this repo
 
@@ -36,11 +45,11 @@ django-admin startproject jimbo
 
 5 - make sure that when you are working with django, same level with manage.py
 
-6 - to create a new application in your django project python manage.py startapp scholar
+6 - to create a new application in your django project python manage.py startapp yourappname
 
 7 - how to make your first view? first create in view.py, then map the view to an url in urls.py in the same application, then map urls.py in the project settings directory (jimbo)
 
-8 - test by going to http://localhost:8080/scholar/
+8 - test by going to http://localhost:8080/api/v0/
 
 9 - We added a second view to simply mirror the request, to inspect it, to understand it
 We got an error, the route path cannot be found, so we installed django-extensions (optional), be careful of parathensis, end with one but don't start with one in your route

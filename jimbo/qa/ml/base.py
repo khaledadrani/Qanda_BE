@@ -14,6 +14,9 @@ class QAModel:
         """
         if model_name == "question-answering":
             self.models['question-answering'] = transformers_pipeline(model_name)
+            return
+
+        raise NotImplementedError('This model does not exist')
       
     def load(self, model_name):
         if model_name in self.models:
@@ -31,7 +34,11 @@ class QAModel:
         context: str
       """
       try:
-       return self.models[model_name](question = question, context = context)
+        if model_name not in self.models:
+            print('loading new model ',model_name)
+            self.get_model(model_name)
+
+        return self.models[model_name](question = question, context = context)
       except Exception as err: 
         print("Error at predict ",str(err))
 

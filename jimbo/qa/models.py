@@ -2,7 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 
-
 # Create your models here.
 class Problem(models.Model):
     id = models.AutoField(auto_created=True,primary_key=True)
@@ -15,3 +14,5 @@ class Problem(models.Model):
     
     def __str__(self):
         return f"Problem({self.id},{self.question})"
+
+    
